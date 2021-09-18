@@ -9,22 +9,96 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header>
-		<div class="box-shadow-dark">
+    <header class="fixed-top-left w-full">
+		<div class="sidebar d-block d-md-none position-fixed py-5">
+			<div class="row py-5 px-3">
+				<div class="col-12 py-2">
+					<a class="text-dark p-0 dropdown-toggle nav-link font-weight-bold" href="#collapsePlans" role="button" data-toggle="collapse" aria-haspopup="true" aria-expanded="false"  aria-controls="collapsePlans">
+						Plans
+					</a>
+					<div class="collapse" id="collapsePlans">
+						<div class="col-12 py-2">
+							<a href="#" class="text-dark text-sm">Private Office Suite</a>
+						</div>
+						<div class="col-12 py-2">
+							<a href="#" class="text-dark text-sm">Flex Fitted Office</a>
+						</div>
+						<div class="col-12 py-2">
+							<a href="#" class="text-dark text-sm">Hot Desk</a>
+						</div>
+						<div class="col-12 py-2">
+							<a href="#" class="text-dark text-sm">Meeting Room & Event Space</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 py-2">
+					<a href="#" class="text-dark font-weight-bold">Promos</a>
+				</div>
+				<div class="col-12 py-2">
+					<a href="#" class="text-dark font-weight-bold">Gallery</a>
+				</div>
+				<div class="col-12 py-2">
+					<a href="#" class="text-dark font-weight-bold">Blogs</a>
+				</div>
+				<div class="col-12 py-2">
+					<a href="#" class="text-dark font-weight-bold">Contact Us</a>
+				</div>
+				<div class="col-12 py-2">
+					<a href="#" class="text-dark font-weight-bold">FAQ</a>
+				</div>
+				<div class="col-12 py-2">
+					<a class="text-dark p-0 dropdown-toggle nav-link font-weight-bold" href="#collapseAuth" role="button" data-toggle="collapse" aria-haspopup="true" aria-expanded="false"  aria-controls="collapseAuth">
+						Sign Up
+					</a>
+					<div class="collapse" id="collapseAuth">
+						<div class="col-12 py-2">
+							<a href="#" class="text-dark text-sm">Sign In</a>
+						</div>
+						<div class="col-12 py-2">
+							<a href="#" class="text-dark text-sm">Log Out</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 py-4">
+					<div class="row align-items-center justify-content-between">
+						<div class="col-auto">
+							<div class="bg-rounded-100-brown text-light py-1 px-3">Book a Tour</div>
+						</div>
+						<div class="col-6 d-flex justify-content-end">
+							<div class="row">
+								<div class="col form-check">
+									<input class="form-check-input" type="radio" name="exampleRadios" id="lang-en" value="en" checked>
+									<label class="form-check-label" for="lang-en">
+									  EN
+									</label>
+								</div>
+								<div class="col form-check">
+									<input class="form-check-input" type="radio" name="exampleRadios" id="lang-id" value="id">
+									<label class="form-check-label" for="lang-id">
+										ID
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="box-shadow-dark position-relative">
 			<div class="container">
 				<div class="row align-items-center justify-content-between">
 					<div class="col-8">
 					<div class="row align-items-center">
-						<div class="col-3">
-							<img class="col-12 py-2" src="assets/images/main-logo.png" alt="main-logo">
+						<div class="col-10 col-md-3">
+							<img class="py-2" src="assets/images/main-logo.png" alt="main-logo">
 						</div>
-						<div class="col-9">
+						<div class="col-9 d-none d-md-flex">
 							<div class="row align-items-center">
 								<div class="col-auto">
-									<a class="text-dark nav-link p-0 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<a class="text-dark p-0 dropdown-toggle" href="#" id="plansDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 										Plans
 									</a>
-									<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<div class="dropdown-menu" aria-labelledby="plansDropdown">
 										<a class="dropdown-item" href="#">Action</a>
 										<a class="dropdown-item" href="#">Another action</a>
 										<a class="dropdown-item" href="#">Something else here</a>
@@ -50,27 +124,32 @@
 					</div>
 					</div>
 					<div class="col-4">
-						<div class="row align-items-center justify-content-end">
+						<div class="row align-items-center justify-content-end d-none d-md-flex">
 							<div class="col-auto">
 								<div class="bg-rounded-100-brown text-light py-1 px-3">Book a Tour</div>
 							</div>
 							<div class="col-auto">
-								<a class="text-dark nav-link p-0 dropdown-toggle" href="#" id="auth" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<a class="text-dark nav-link p-0 dropdown-toggle" href="#" id="authDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									Sign Up
 								</a>
-								<div class="dropdown-menu" aria-labelledby="auth">
-									<a class="dropdown-item" href="#">Sign Up</a>
+								<div class="dropdown-menu" aria-labelledby="authDropdown">
 									<a class="dropdown-item" href="#">Sign In</a>
+									<a class="dropdown-item" href="#">Log Out</a>
 								</div>
 							</div>
 							<div class="col-auto">
-								<a class="text-dark nav-link p-0 dropdown-toggle" href="#" id="auth" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<a class="text-dark nav-link p-0 dropdown-toggle" href="#" id="langDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									En
 								</a>
-								<div class="dropdown-menu" aria-labelledby="auth">
+								<div class="dropdown-menu" aria-labelledby="langDropdown">
 									<a class="dropdown-item" href="#">En</a>
 									<a class="dropdown-item" href="#">Id</a>
 								</div>
+							</div>
+						</div>
+						<div class="row align-items-center justify-content-end d-flex d-md-none">
+							<div class="col-7">
+								<img src="assets/images/icons/burger-icon.png" alt="burger-icon" class="pl-3 burger-button">
 							</div>
 						</div>
 					</div>

@@ -1,3 +1,6 @@
+img {
+    width: 100%;
+}
 .bg-rounded-100-brown {
     background: #928883;
     border-radius: 24px;
@@ -5,6 +8,36 @@
 .box-shadow-dark {
     box-shadow: 0px 2px 4px rgb(0 0 0 / 15%);
 }
+.fixed-top-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.w-full {
+    width: 100%;
+}
+.sidebar {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform .4s cubic-bezier(.46,.54,.17,1),-webkit-transform .4s cubic-bezier(.46,.54,.17,1);
+}
+.sidebar.show {
+    transform: translateX(0%);
+}
+.text-sm {
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
 @media (min-width: 992px) {
     .container {
         max-width: 1040px;
