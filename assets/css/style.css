@@ -5,6 +5,9 @@ img {
     background: #928883;
     border-radius: 24px;
 }
+.bg-white {
+    background-color: #fff;
+}
 .box-shadow-dark {
     box-shadow: 0px 2px 4px rgb(0 0 0 / 15%);
 }
@@ -12,6 +15,9 @@ img {
     position: fixed;
     top: 0;
     left: 0;
+}
+header {
+    z-index: 99;
 }
 .w-full {
     width: 100%;
@@ -30,6 +36,34 @@ img {
 .text-sm {
     font-size: 14px;
 }
+.ratio-horizontal {
+    width: 100%;
+    padding-bottom: 56.25%;
+    background-size: cover;
+    background-position: center;
+}
+.jumbotron--nav {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+}
+.jumbotron--prev, .jumbotron--next {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    z-index: 1;
+    background-size: cover;
+    cursor: pointer;
+    display: none;
+}
+.jumbotron--prev {
+    background-image: url('../images/icons/arr-left.png');
+    left: 8%;
+}
+.jumbotron--next {
+    background-image: url('../images/icons/arr-right.png');
+    right: 6%;
+}
 
 
 
@@ -41,6 +75,9 @@ img {
 @media (min-width: 992px) {
     .container {
         max-width: 1040px;
+    }
+    .jumbotron--prev, .jumbotron--next {
+        display: block;
     }
 }
 @media (min-width: 1200px) {
