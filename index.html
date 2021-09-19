@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>KLOUD</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -63,7 +67,7 @@
 				<div class="col-12 py-4">
 					<div class="row align-items-center justify-content-between">
 						<div class="col-auto">
-							<div class="bg-rounded-100-brown text-light py-1 px-3">Book a Tour</div>
+							<div class="bg-rounded-100-brown text-light py-1 px-3 cursor-pointer">Book a Tour</div>
 						</div>
 						<div class="col-6 d-flex justify-content-end">
 							<div class="row">
@@ -159,10 +163,11 @@
 		</div>
     </header>
 
-	<section class="jumbotron w-full mt-5">
+	<!-- jumbotron-slide -->
+	<section class="jumbotron w-full mt-5 pb-0 mb-4 mb-md-0 px-0 bg-white">
 		<div class="container mt-2 position-relative">
 			<div class="swiper-container swiper--jumbotron w-full">
-			  <div class="swiper-wrapper row flex-nowrap">
+			  <div class="swiper-wrapper d-flex flex-nowrap">
 				<div class="swiper-slide px-2">
 					<div class="ratio-horizontal" style="background-image: url('assets/images/cov1.jpg');"></div>
 				</div>
@@ -172,20 +177,208 @@
 				<div class="swiper-slide px-2">
 					<div class="ratio-horizontal" style="background-image: url('assets/images/cov3.jpg');"></div>
 				</div>
-				<div class="swiper-slide px-2">
-					<div class="ratio-horizontal" style="background-image: url('assets/images/cov4.jpg');"></div>
-				</div>
 			  </div>
 			</div>
 			<div class="jumbotron--nav jumbotron--prev"></div>
 			<div class="jumbotron--nav jumbotron--next"></div>
 		</div>
 	</section>
+
+	<!-- filters menu -->
+	<section class="container hang-top">
+		<div class="col-12 col-md-9 px-0 bg-white rounded-8 mx-md-auto">
+			<!-- head filters -->
+			<div class="filter-box swiper-container swiper--tabFilters col-12 col-md-11 mx-auto rounded-8">
+				<div class="d-flex p-0 swiper-wrapper flex-nowrap">
+					<div class="swiper-slide col-md p-2 p-md-3 cursor-pointer filter-menu align-items-center justify-content-center active">
+						<div class="d-flex justify-content-center align-items-center">
+							<div class="w-24">
+								<img class="nonactive" src="assets/images/icons/ch-1.png" alt="Flex Fitted Office">
+								<img class="active" src="assets/images/icons/ch-1-active.png" alt="Flex Fitted Office">
+							</div>
+							<div class="col-auto px-0 pl-2 text-sm font-weight-bold">
+								Flex Fitted Office
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide col-md-4 p-2 p-md-3 cursor-pointer filter-menu align-items-center justify-content-center">
+						<div class="d-flex justify-content-center align-items-center">
+							<div class="w-24">
+								<img class="nonactive" src="assets/images/icons/ch-2.png" alt="Meeting Room & Event Space">
+								<img class="active" src="assets/images/icons/ch-2-active.png" alt="Meeting Room & Event Space">
+							</div>
+							<div class="col-auto px-0 pl-2 text-sm font-weight-bold">
+								Meeting Room & Event Space
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide col-md p-2 p-md-3 cursor-pointer filter-menu align-items-center justify-content-center">
+						<div class="d-flex justify-content-center align-items-center">
+							<div class="w-24">
+								<img class="nonactive" src="assets/images/icons/ch-3.png" alt="Hot Desk">
+								<img class="active" src="assets/images/icons/ch-3-active.png" alt="Hot Desk">
+							</div>
+							<div class="col-auto px-0 pl-2 text-sm font-weight-bold">
+								Hot Desk
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide col-md p-2 p-md-3 cursor-pointer filter-menu align-items-center justify-content-center">
+						<div class="d-flex justify-content-center align-items-center">
+							<div class="w-24">
+								<img class="nonactive" src="assets/images/icons/ch-4.png" alt="Virtual Office">
+								<img class="active" src="assets/images/icons/ch-4-active.png" alt="Virtual Office">
+							</div>
+							<div class="col-auto px-0 pl-2 text-sm font-weight-bold">
+								Virtual Office
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-button-prev tab-filters--prev"></div>
+				<div class="swiper-button-next tab-filters--next"></div>
+			</div>
+			<!-- content filters -->
+			<div class="pt-4 pt-md-5">
+				<div class="swiper-container swiper--filters w-full px-2">
+				  <div class="swiper-wrapper d-flex flex-nowrap">
+					<div class="swiper-slide px-2">
+						<div class="row">
+							<div class="col-12 col-md">
+								<div class="form-group">
+									<label class="font-weight-bold" for="suiteTypeFFO">Suite Type</label>
+									<select class="form-control" id="suiteTypeFFO">
+										<option>1 (57 Pax)</option>
+										<option>2 (58 Pax)</option>
+										<option>3 (59 Pax)</option>
+										<option>4 (60 Pax)</option>
+										<option>5 (61 Pax)</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-12 col-md">
+								<div class="form-group">
+									<label class="font-weight-bold" for="durationFFO">Duration</label>
+									<select class="form-control" id="durationFFO">
+										<option>1 Month</option>
+										<option>2 Month</option>
+										<option>3 Month</option>
+										<option>4 Month</option>
+										<option>5 Month</option>
+										<option>1 Year</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-12 col-md">
+								<div class="form-group">
+									<label class="font-weight-bold" for="dateFFO">Date</label>
+									<input id="dateFFO" />
+								</div>
+							</div>
+						</div>
+						<div class="row justify-content-center">
+							<div class="col-auto bg-rounded-8-brown text-light py-1 px-3 cursor-pointer">SEARCH</div>
+						</div>
+					</div>
+					<div class="swiper-slide px-2">
+						<div class="row">
+							<div class="col-12 col-md">
+								<div class="form-group">
+									<label class="font-weight-bold" for="suiteTypeMRE">Suite Type</label>
+									<select class="form-control" id="suiteTypeMRE">
+										<option>1 (57 Pax)</option>
+										<option>2 (58 Pax)</option>
+										<option>3 (59 Pax)</option>
+										<option>4 (60 Pax)</option>
+										<option>5 (61 Pax)</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-12 col-md">
+								<div class="form-group">
+									<label class="font-weight-bold" for="durationMRE">Duration</label>
+									<select class="form-control" id="durationMRE">
+										<option>1 Month</option>
+										<option>2 Month</option>
+										<option>3 Month</option>
+										<option>4 Month</option>
+										<option>5 Month</option>
+										<option>1 Year</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-12 col-md">
+								<div class="form-group">
+									<label class="font-weight-bold" for="dateMRE">Date</label>
+									<input id="dateMRE" />
+								</div>
+							</div>
+						</div>
+						<div class="row justify-content-center">
+							<div class="col-auto bg-rounded-8-brown text-light py-1 px-3 cursor-pointer">SEARCH</div>
+						</div>
+					</div>
+					<div class="swiper-slide px-2">
+						<div class="row">
+							<div class="col-12 col-md">
+								<div class="form-group">
+									<label class="font-weight-bold" for="suiteTypeHD">PAX</label>
+									<select class="form-control" id="suiteTypeHD">
+										<option>1 (57 Pax)</option>
+										<option>2 (58 Pax)</option>
+										<option>3 (59 Pax)</option>
+										<option>4 (60 Pax)</option>
+										<option>5 (61 Pax)</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-12 col-md">
+								<div class="form-group">
+									<label class="font-weight-bold" for="dateStayHD">Date</label>
+									<input id="dateStayHD" />
+								</div>
+							</div>
+						</div>
+						<div class="row justify-content-center">
+							<div class="col-auto bg-rounded-8-brown text-light py-1 px-3 cursor-pointer">SEARCH</div>
+						</div>
+					</div>
+					<div class="swiper-slide px-2">
+						<div class="row">
+							<div class="col-12 col-md">
+								<div class="form-group">
+									<label class="font-weight-bold" for="suiteTypeVO">PAX</label>
+									<select class="form-control" id="suiteTypeVO">
+										<option>1 (57 Pax)</option>
+										<option>2 (58 Pax)</option>
+										<option>3 (59 Pax)</option>
+										<option>4 (60 Pax)</option>
+										<option>5 (61 Pax)</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-12 col-md">
+								<div class="form-group">
+									<label class="font-weight-bold" for="dateStayVO">Date</label>
+									<input id="dateStayVO" />
+								</div>
+							</div>
+						</div>
+						<div class="row justify-content-center">
+							<div class="col-auto bg-rounded-8-brown text-light py-1 px-3 cursor-pointer">SEARCH</div>
+						</div>
+					</div>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</section>
     
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js?ver=4.5.0"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js?ver=4.5.0"></script>
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
     <script src="assets/js/app.js"></script>
 </body>
 </html>

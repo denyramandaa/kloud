@@ -1,3 +1,6 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
 img {
     width: 100%;
 }
@@ -5,8 +8,12 @@ img {
     background: #928883;
     border-radius: 24px;
 }
+.bg-rounded-8-brown {
+    background: #928883;
+    border-radius: 8px;
+}
 .bg-white {
-    background-color: #fff;
+    background-color: #F6F3F1;
 }
 .box-shadow-dark {
     box-shadow: 0px 2px 4px rgb(0 0 0 / 15%);
@@ -21,6 +28,18 @@ header {
 }
 .w-full {
     width: 100%;
+}
+.w-24 {
+    width: 24px;
+}
+.rounded-8 {
+    border-radius: 8px;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+.swiper-wrapper {
+    height: auto;
 }
 .sidebar {
     width: 100%;
@@ -58,19 +77,100 @@ header {
 }
 .jumbotron--prev {
     background-image: url('../images/icons/arr-left.png');
-    left: 8%;
+    left: 9%;
 }
 .jumbotron--next {
     background-image: url('../images/icons/arr-right.png');
-    right: 6%;
+    right: 5%;
+}
+.tab-filters--prev, .tab-filters--next {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    z-index: 1;
+    background-size: cover;
+    cursor: pointer;
+    width: 8px;
+    height: 16px;
+    margin: 0;
+}
+
+
+.tab-filters--prev {
+    background-image: url('../images/icons/arr-left-white.png');
+    left: 0;
+    margin-left: 10px;
+}
+.tab-filters--next {
+    background-image: url('../images/icons/arr-right-white.png');
+    right: 0;
+    margin-right: 10px;
+}
+.filter-box {
+    background-color: #928883;
+    border-radius: 8px 8px 0 0;
+}
+.filter-menu {
+    border-radius: 8px 8px 0 0;
+    color: #fff;
+}
+.filter-menu {
+    border-radius: 8px 8px 0 0;
+}
+.filter-menu .nonactive {
+    display: none;
 }
 
 
 
-
-
-
-
+@media (min-width: 769px) {
+    .hang-top {
+        margin-top: -60px;
+        position: relative;
+        z-index: 1;
+    }
+    .filter-box {
+        position: absolute;
+        left: 50%;
+        top: -30px;
+        transform: translateX(-50%);
+        background: white;
+        z-index: 3;
+        border-radius: 8px 8px 8px 8px;
+    }
+    .tab-filters--prev, .tab-filters--next {
+        display: none;
+    }
+    .swiper--tabFilters {
+        overflow: visible;
+    }
+    .filter-menu {
+        border-radius: 0 0 0 0;
+        color: #333;
+    }
+    .filter-menu:first-child {
+        border-radius: 8px 0 0 8px;
+    }
+    .filter-menu:last-child {
+        border-radius: 0 8px 8px 0;
+    }
+    .filter-menu.active {
+        background-color: #928883;
+        color: #fff;
+    }
+    .filter-menu .nonactive {
+        display: block;
+    }
+    .filter-menu .active {
+        display: none;
+    }
+    .filter-menu.active .nonactive {
+        display: none;
+    }
+    .filter-menu.active .active {
+        display: block;
+    }
+}
 
 @media (min-width: 992px) {
     .container {
