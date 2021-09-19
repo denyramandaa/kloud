@@ -50,6 +50,79 @@ $(document).ready(function() {
             },
         });
     }
+    function initSwiperWhyUs(){
+        swiperTabs = new Swiper('.swiper--whyus', {
+            effect: 'slide',
+            watchOverflow: true,
+            slidesPerView: 4,
+            spaceBetween: 40,
+            speed: 600,
+            navigation: {
+                nextEl: '.whyus--next',
+                prevEl: '.whyus--prev',
+            },
+            pagination: {
+                el: ".whyus--pagination",
+                clickable: true
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1
+                }
+            }
+        });
+    }
+    function initSwiperTestimonials(){
+        swiperTabs = new Swiper('.swiper--testimonials', {
+            effect: 'slide',
+            watchOverflow: true,
+            slidesPerView: 3,
+            spaceBetween: 20,
+            speed: 600,
+            pagination: {
+                el: ".testimonials--pagination",
+                clickable: true
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1.2
+                }
+            }
+        });
+    }
+    function initSwiperPartnership(){
+        swiperTabs = new Swiper('.swiper--partnership', {
+            effect: 'slide',
+            watchOverflow: true,
+            slidesPerView: 5,
+            spaceBetween: 60,
+            speed: 600,
+            breakpoints: {
+                640: {
+                    slidesPerView: 2.3,
+                    spaceBetween: 20,
+                }
+            },
+            navigation: {
+                nextEl: '.partnership--next',
+                prevEl: '.partnership--prev',
+            }
+        });
+    }
+    function initSwiperBlogs(){
+        swiperTabs = new Swiper('.swiper--blogs', {
+            effect: 'slide',
+            watchOverflow: true,
+            slidesPerView: 3,
+            spaceBetween: 20,
+            speed: 600,
+            breakpoints: {
+                640: {
+                    slidesPerView: 1.2
+                }
+            }
+        });
+    }
     let sidebarStatus = false
     $('.burger-button').click(() => {
         const icon = sidebarStatus ? 'burger-icon.png' : 'close-icon.png'
@@ -79,6 +152,10 @@ $(document).ready(function() {
     })
     initSwiperJumbotron();
     initSwiperFilters();
+    initSwiperWhyUs()
+    initSwiperTestimonials()
+    initSwiperPartnership()
+    initSwiperBlogs()
     if(isMobile) {
         initSwiperTabFilters()
         swiperTabs.on('slideChange', function () {
