@@ -12,6 +12,7 @@ a:hover {
     text-decoration: none;
     color: initial;
 }
+
 /* custom bs */
 .w-full {
     width: 100%;
@@ -100,7 +101,7 @@ a:hover {
     background-position: center;
 }
 
-/* swiper */
+/* custom swiper */
 .swiper-wrapper {
     height: auto;
 }

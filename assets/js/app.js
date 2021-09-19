@@ -49,6 +49,11 @@ $(document).ready(function() {
                 prevEl: '.tab-filters--prev',
             },
         });
+        
+        swiperTabs.on('slideChange', function () {
+            swiperFilters.slideTo(swiperTabs.activeIndex)
+            $('.filter-menu').removeClass('active')
+        });
     }
     function initSwiperWhyUs(){
         swiperTabs = new Swiper('.swiper--whyus', {
@@ -158,10 +163,6 @@ $(document).ready(function() {
     initSwiperBlogs()
     if(isMobile) {
         initSwiperTabFilters()
-        swiperTabs.on('slideChange', function () {
-            swiperFilters.slideTo(swiperTabs.activeIndex)
-            $('.filter-menu').removeClass('active')
-        });
     }
 });
 }(jQuery));
