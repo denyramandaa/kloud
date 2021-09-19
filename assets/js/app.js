@@ -90,7 +90,7 @@ $(document).ready(function() {
             },
             breakpoints: {
                 640: {
-                    slidesPerView: 1.2
+                    slidesPerView: 1.1
                 }
             }
         });
