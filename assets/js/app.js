@@ -3,6 +3,7 @@
 $(document).ready(function() {
     let swiperFilters;
     let swiperTabs;
+    let swiperRooms;
     let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     function initSwiperJumbotron(){
         let swiper = new Swiper('.swiper--jumbotron', {
@@ -56,7 +57,7 @@ $(document).ready(function() {
         });
     }
     function initSwiperWhyUs(){
-        swiperTabs = new Swiper('.swiper--whyus', {
+        let swiper = new Swiper('.swiper--whyus', {
             effect: 'slide',
             watchOverflow: true,
             slidesPerView: 4,
@@ -78,11 +79,11 @@ $(document).ready(function() {
         });
     }
     function initSwiperRooms(){
-        swiperTabs = new Swiper('.swiper--rooms', {
+        swiperRooms = new Swiper('.swiper--rooms', {
             effect: 'slide',
             watchOverflow: true,
             slidesPerView: 1,
-            spaceBetween: 10,
+            spaceBetween: 30,
             speed: 600,
             navigation: {
                 nextEl: '.rooms--next',
@@ -90,13 +91,14 @@ $(document).ready(function() {
             },
             breakpoints: {
                 640: {
-                    slidesPerView: 1.2
+                    slidesPerView: 1.2,
+                    spaceBetween: 10,
                 }
             }
         });
     }
     function initSwiperTestimonials(){
-        swiperTabs = new Swiper('.swiper--testimonials', {
+        let swiper = new Swiper('.swiper--testimonials', {
             effect: 'slide',
             watchOverflow: true,
             slidesPerView: 3,
@@ -114,7 +116,7 @@ $(document).ready(function() {
         });
     }
     function initSwiperPartnership(){
-        swiperTabs = new Swiper('.swiper--partnership', {
+        let swiper = new Swiper('.swiper--partnership', {
             effect: 'slide',
             watchOverflow: true,
             slidesPerView: 5,
@@ -133,7 +135,7 @@ $(document).ready(function() {
         });
     }
     function initSwiperBlogs(){
-        swiperTabs = new Swiper('.swiper--blogs', {
+        let swiper = new Swiper('.swiper--blogs', {
             effect: 'slide',
             watchOverflow: true,
             slidesPerView: 3,
@@ -173,6 +175,11 @@ $(document).ready(function() {
             swiperFilters.slideTo(idx)
         })
     })
+    $('.swiper--rooms .swiper-slide').each(function(idx) {
+        $(this).click(() => {
+            swiperRooms.slideTo(idx)
+        })
+    });
     initSwiperRooms();
     initSwiperJumbotron();
     initSwiperFilters();
