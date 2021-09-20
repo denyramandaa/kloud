@@ -77,6 +77,24 @@ $(document).ready(function() {
             }
         });
     }
+    function initSwiperRooms(){
+        swiperTabs = new Swiper('.swiper--rooms', {
+            effect: 'slide',
+            watchOverflow: true,
+            slidesPerView: 1,
+            spaceBetween: 10,
+            speed: 600,
+            navigation: {
+                nextEl: '.rooms--next',
+                prevEl: '.rooms--prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1.2
+                }
+            }
+        });
+    }
     function initSwiperTestimonials(){
         swiperTabs = new Swiper('.swiper--testimonials', {
             effect: 'slide',
@@ -155,6 +173,7 @@ $(document).ready(function() {
             swiperFilters.slideTo(idx)
         })
     })
+    initSwiperRooms();
     initSwiperJumbotron();
     initSwiperFilters();
     initSwiperWhyUs()

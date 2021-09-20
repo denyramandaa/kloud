@@ -69,6 +69,9 @@ a:hover {
 .border-1-grey {
     border: 1px solid #EEEEEE;
 }
+.border-1-grey-200 {
+    border: 1px solid #DDDDDD;
+}
 .rounded-8 {
     border-radius: 8px;
 }
@@ -112,6 +115,9 @@ a:hover {
     padding-bottom: 100%;
     background-size: cover;
     background-position: center;
+}
+.overflow-hidden {
+    overflow: hidden;
 }
 
 /* custom swiper */
@@ -205,7 +211,7 @@ a:hover {
 .filter-menu .nonactive {
     display: none;
 }
-.partnership--prev, .partnership--next {
+.partnership--prev, .partnership--next, .rooms--prev, .rooms--next {
     position: relative;
     left: auto;
     right: auto;
@@ -217,17 +223,13 @@ a:hover {
     width: 16px;
     display: none;
 }
-.partnership--prev {
+.partnership--prev, .rooms--prev {
+    background-image: url('../images/icons/arr-left-brown.png');
     margin-right: 32px;
 }
-.partnership--prev {
-    background-image: url('../images/icons/arr-left-brown.png');
-}
-.partnership--next {
+.partnership--next, .rooms--next {
     background-image: url('../images/icons/arr-right-brown.png');
 }
-
-
 /* own style */
 .sidebar {
     width: 100%;
@@ -336,6 +338,16 @@ footer {
     color: #999;
     background-size: 12px;
 }
+.floating-button {
+    width: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 0;
+    z-index: 99;
+}
+.custom-swiper-view {
+    align-items: end;
+}
 
 /* media query */
 @media (min-width: 769px) {
@@ -383,7 +395,7 @@ footer {
     .tab-filters--prev, .tab-filters--next, .whyus--prev, .whyus--next {
         display: none;
     }
-    .partnership--prev, .partnership--next {
+    .partnership--prev, .partnership--next, .rooms--prev, .rooms--next {
         display: block;
     }
     .swiper--tabFilters {
@@ -417,6 +429,34 @@ footer {
     }
     .swiper-pagination-bullet {
         display: block;
+    }
+    .custom-hide {
+        overflow: hidden;
+        transition: all .5s linear;
+    }
+    .swiper--rooms .swiper-slide .custom-hide {
+        max-height: 0;
+    }
+    .swiper--rooms .swiper-slide-prev .custom-hide {
+        max-height: 500px;
+    }
+    .swiper--rooms {
+        overflow: visible;
+    }
+    .swiper--rooms .swiper-slide {
+        transition: all .5s linear;
+        transform: scale(0.8);
+        transform-origin: center bottom;
+    }
+    .swiper--rooms .swiper-slide-prev{
+        opacity: 0;
+    }
+    .swiper--rooms .swiper-slide-active {
+        transform: scale(1);
+    }
+    .swiper--rooms .swiper-slide-active .custom-hide {
+        transition-delay: .5s;
+        max-height: 500px
     }
 }
 

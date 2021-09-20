@@ -164,7 +164,7 @@
     </header>
 
 	<!-- jumbotron-slide -->
-	<section class="jumbotron w-full mt-4 pb-0 mb-4 mb-md-0 px-0 bg-white">
+	<section class="jumbotron w-full mt-5 mt-md-4 pb-0 mb-4 mb-md-0 px-0 bg-white">
 		<div class="container mt-2 position-relative">
 			<div class="swiper-container swiper--jumbotron w-full">
 			  <div class="swiper-wrapper d-flex flex-nowrap">
@@ -243,7 +243,7 @@
 				<div class="swiper-container swiper--filters w-full px-2">
 				  <div class="swiper-wrapper d-flex flex-nowrap">
 					<div class="swiper-slide">
-						<div class="d-flex mb-4 mb-md-0">
+						<div class="d-flex mb-4 mb-md-0 flex-wrap">
 							<div class="col-12 col-md">
 								<div class="form-group">
 									<label class="font-weight-bold" for="suiteTypeFFO">Suite Type</label>
@@ -278,7 +278,7 @@
 						</div>
 					</div>
 					<div class="swiper-slide">
-						<div class="d-flex mb-4 mb-md-0">
+						<div class="d-flex mb-4 mb-md-0 flex-wrap">
 							<div class="col-12 col-md">
 								<div class="form-group">
 									<label class="font-weight-bold" for="suiteTypeMRE">Suite Type</label>
@@ -313,7 +313,7 @@
 						</div>
 					</div>
 					<div class="swiper-slide">
-						<div class="d-flex mb-4 mb-md-0">
+						<div class="d-flex mb-4 mb-md-0 flex-wrap">
 							<div class="col-12 col-md">
 								<div class="form-group">
 									<label class="font-weight-bold" for="suiteTypeHD">PAX</label>
@@ -335,7 +335,7 @@
 						</div>
 					</div>
 					<div class="swiper-slide">
-						<div class="d-flex mb-4 mb-md-0">
+						<div class="d-flex mb-4 mb-md-0 flex-wrap">
 							<div class="col-12 col-md">
 								<div class="form-group">
 									<label class="font-weight-bold" for="suiteTypeVO">PAX</label>
@@ -368,18 +368,59 @@
 
 	<!-- rooms -->
 	<section class="rooms container custom-mt-section">
-		<div class="row">
-			<div class="col-4"></div>
-			<div class="col-8">
-				<div class="col-12 d-flex justify-content-between flex-wrap align-items-start">
+		<div class="d-flex overflow-hidden flex-wrap flex-column-reverse flex-md-row">
+			<div class="col-12 col-md-4 mt-4 mt-md-0">
+				<div class="swiper-container swiper--rooms">
+					<div class="swiper-wrapper d-flex flex-nowrap custom-swiper-view">
+						<div class="text-center swiper-slide rounded-4 border-1-grey-200">
+							<div class="w-full ratio-horizontal" style="background-image: url('assets/images/rooms-1.jpg');"></div>
+							<div class="p-4">
+								<h3 class="mb-0 font-weight-bold text-lg">Meeting Room Level 23A</h3>
+								<div class="mt-2 custom-hide">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quam eu eu, neque leo orci diam viverra sit.</p>
+									<div class="row justify-content-center">
+										<div class="col-11 col-md-auto bg-rounded-8-brown text-light py-1 px-3 cursor-pointer text-center">BOOK NOW</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="text-center swiper-slide rounded-4 border-1-grey-200">
+							<div class="w-full ratio-horizontal" style="background-image: url('assets/images/rooms-2.jpg');"></div>
+							<div class="p-4">
+								<h3 class="mb-0 font-weight-bold text-lg">Meeting Room Level 33</h3>
+								<div class="mt-2 custom-hide">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quam eu eu, neque leo orci diam viverra sit.</p>
+									<div class="row justify-content-center">
+										<div class="col-11 col-md-auto bg-rounded-8-brown text-light py-1 px-3 cursor-pointer text-center">BOOK NOW</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="text-center swiper-slide rounded-4 border-1-grey-200">
+							<div class="w-full ratio-horizontal" style="background-image: url('assets/images/rooms-3.jpg');"></div>
+							<div class="p-4">
+								<h3 class="mb-0 font-weight-bold text-lg">Office Suite Level 23A</h3>
+								<div class="mt-2 custom-hide">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quam eu eu, neque leo orci diam viverra sit.</p>
+									<div class="row justify-content-center">
+										<div class="col-11 col-md-auto bg-rounded-8-brown text-light py-1 px-3 cursor-pointer text-center">BOOK NOW</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-8 px-0 mt-5 mt-md-0">
+				<div class="col-12 d-flex justify-content-between flex-wrap align-items-start px-0">
 					<div class="text-left col-9">
 						<span class="line-grey left"></span>
 						<h2 class="font-weight-bold text-4xl mb-2">Rooms</h2>
 						<p class="text-grey px-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quam eu eu, neque leo orci diam viverra sit. Enim, ullamcorper est feugiat mauris, nibh eu cursus nulla.</p>
 					</div>
 					<div class="d-flex">
-						<div class="swiper-button-prev partnership--prev"></div>
-						<div class="swiper-button-next partnership--next"></div>
+						<div class="swiper-button-prev rooms--prev"></div>
+						<div class="swiper-button-next rooms--next"></div>
 					</div>
 				</div>
 			</div>
@@ -737,6 +778,15 @@
 	<footer class="mt-5 py-3">
 		<div class="text-center text-light text-sm">Copyright © 2021 KLOUD Space Solutions Pte Limited.</div>
 	</footer>
+
+	<section class="floating-button">
+		<a href="#">
+			<img src="assets/images/icons/wa-floating.png" alt="wa">
+		</a>
+		<a href="#">
+			<img src="assets/images/icons/call-floating.png" alt="phone">
+		</a>
+	</section>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
