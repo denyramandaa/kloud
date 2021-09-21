@@ -196,11 +196,18 @@ $(document).ready(function() {
     })
     $('.jumbotron--slick').slick({
         dots: false,
+        mobileFirst:true,
         infinite: true,
         speed: 300,
         slidesToShow: 1,
-        centerMode: true,
-        variableWidth: true
+        centerMode: false,
+        variableWidth: true,
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+              centerMode: true
+            }
+        }]
     });
     initSwiperRooms();
     initSwiperJumbotron();
