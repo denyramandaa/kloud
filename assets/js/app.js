@@ -72,7 +72,10 @@ $(document).ready(function() {
                 clickable: true
             },
             breakpoints: {
-                640: {
+                800: {
+                    slidesPerView: 3
+                },
+                600: {
                     slidesPerView: 1
                 }
             }
@@ -90,7 +93,7 @@ $(document).ready(function() {
                 prevEl: '.rooms--prev',
             },
             breakpoints: {
-                640: {
+                600: {
                     slidesPerView: 1.2,
                     spaceBetween: 10,
                 }
@@ -109,7 +112,10 @@ $(document).ready(function() {
                 clickable: true
             },
             breakpoints: {
-                640: {
+                800: {
+                    slidesPerView: 2.2
+                },
+                600: {
                     slidesPerView: 1.1
                 }
             }
@@ -123,7 +129,10 @@ $(document).ready(function() {
             spaceBetween: 60,
             speed: 600,
             breakpoints: {
-                640: {
+                800: {
+                    slidesPerView: 3.5
+                },
+                600: {
                     slidesPerView: 2.3,
                     spaceBetween: 20,
                 }
@@ -142,7 +151,10 @@ $(document).ready(function() {
             spaceBetween: 20,
             speed: 600,
             breakpoints: {
-                640: {
+                800: {
+                    slidesPerView: 2.2
+                },
+                600: {
                     slidesPerView: 1.2
                 }
             }
@@ -203,7 +215,7 @@ $(document).ready(function() {
         centerMode: false,
         variableWidth: true,
         responsive: [{
-            breakpoint: 1024,
+            breakpoint: 760,
             settings: {
               centerMode: true
             }

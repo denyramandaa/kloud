@@ -239,6 +239,9 @@ a:hover {
     right: 0;
     transform: translateX(100%);
     transition: transform .4s cubic-bezier(.46,.54,.17,1),-webkit-transform .4s cubic-bezier(.46,.54,.17,1);
+    overflow-y: scroll;
+    max-height: 100vh;
+    overflow-x: hidden;
 }
 .sidebar.show {
     transform: translateX(0%);
@@ -414,48 +417,103 @@ footer {
     background-image: url('../images/icons/arr-bottom.png');
     background-size: cover;
 }
+.jumbotron--slick {
+    overflow: hidden;
+}
 .jumbotron--slick .slick-slide{
     width: 296px;
 }
-
-.slick-arrow {
-    position: absolute;
-    top: 50%;
-    z-index: 1;
-    background-size: cover;
-    cursor: pointer;
-    display: none !important;
-    width: 48px;
-    height: 48px;
-}
-.slick-prev {
-    background-image: url('../images/icons/arr-left.png');
-    transform: translate(-50%,-50%);
-    left: calc((100% - 1020px)/2);
-}
-.slick-next {
-    background-image: url('../images/icons/arr-right.png');
-    transform: translate(50%,-50%);
-    right: calc((100% - 1020px)/2);
-}
-.slick-prev:before, .slick-next:before {
-    content: '';
-}
-.slick-prev:hover, .slick-prev:focus {
-    background-image: url('../images/icons/arr-left.png');
-    background-size: cover;
-}
-.slick-next:hover, .slick-next:focus {
-    background-image: url('../images/icons/arr-right.png');
-    background-size: cover;
-}
 /* media query */
-@media (min-width: 769px) {
+@media (min-width: 760px) {
     .jumbotron--slick .slick-slide{
-        width: 1020px;
+        width: 480px;
+    }
+    .partnership--prev, .partnership--next, .rooms--prev, .rooms--next {
+        display: block;
+    }
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+        background-size: cover;
+        cursor: pointer;
+        display: none !important;
+        width: 48px;
+        height: 48px;
+    }
+    .slick-prev {
+        background-image: url('../images/icons/arr-left.png');
+        transform: translate(-50%,-50%);
+        left: calc((100% - 480px)/2);
+    }
+    .slick-next {
+        background-image: url('../images/icons/arr-right.png');
+        transform: translate(50%,-50%);
+        right: calc((100% - 480px)/2);
+    }
+    .slick-prev:before, .slick-next:before {
+        content: '';
+    }
+    .slick-prev:hover, .slick-prev:focus {
+        background-image: url('../images/icons/arr-left.png');
+        background-size: cover;
+    }
+    .slick-next:hover, .slick-next:focus {
+        background-image: url('../images/icons/arr-right.png');
+        background-size: cover;
+    }
+    .slick-arrow {
+        display: block !important;
+    }
+    .custom-hide {
+        overflow: hidden;
+    }
+    .swiper--rooms .swiper-slide .custom-hide {
+        max-height: 0;
+    }
+    .swiper--rooms .swiper-slide-active .custom-hide {
+        max-height: 500px;
+        transition: all .5s linear;
+        transition-delay: .5s;
+    }
+    .swiper--rooms .swiper-slide-prev .custom-hide {
+        max-height: 500px;
+    }
+    .swiper--rooms {
+        overflow: visible;
+    }
+    .swiper--rooms .swiper-slide {
+        transition: all .5s linear;
+        transform-origin: center bottom;
+    }
+    .swiper--rooms .swiper-slide .ratio-horizontal {
+        padding-bottom: 45%;
+        transition: all .2s linear;
+    }
+    .swiper--rooms .swiper-slide-active .ratio-horizontal {
+        transition-delay: .5s;
+        padding-bottom: 56.25%;
+    }
+    .swiper--rooms .swiper-slide-prev .ratio-horizontal{
+        padding-bottom: 56.25%;
     }
     .custom-swiper-view {
         align-items: end;
+    }
+}
+@media (min-width: 850px) {
+    .slick-prev {
+        background-image: url('../images/icons/arr-left.png');
+        transform: translate(-50%,-50%);
+        left: calc((100% - 1020px)/2);
+    }
+    .slick-next {
+        background-image: url('../images/icons/arr-right.png');
+        transform: translate(50%,-50%);
+        right: calc((100% - 1020px)/2);
+    }
+    .jumbotron--slick .slick-slide{
+        width: 1020px;
     }
     .filter-menu-border {
         border-right: 1px solid #eee;
@@ -501,9 +559,6 @@ footer {
     .tab-filters--prev, .tab-filters--next, .whyus--prev, .whyus--next {
         display: none;
     }
-    .partnership--prev, .partnership--next, .rooms--prev, .rooms--next {
-        display: block;
-    }
     .swiper--tabFilters {
         overflow: visible;
     }
@@ -535,38 +590,6 @@ footer {
     }
     .swiper-pagination-bullet {
         display: block;
-    }
-    .custom-hide {
-        overflow: hidden;
-    }
-    .swiper--rooms .swiper-slide .custom-hide {
-        max-height: 0;
-    }
-    .swiper--rooms .swiper-slide-active .custom-hide {
-        max-height: 500px;
-        transition: all .5s linear;
-        transition-delay: .5s;
-    }
-    .swiper--rooms .swiper-slide-prev .custom-hide {
-        max-height: 500px;
-    }
-    .swiper--rooms {
-        overflow: visible;
-    }
-    .swiper--rooms .swiper-slide {
-        transition: all .5s linear;
-        transform-origin: center bottom;
-    }
-    .swiper--rooms .swiper-slide .ratio-horizontal {
-        padding-bottom: 45%;
-        transition: all .2s linear;
-    }
-    .swiper--rooms .swiper-slide-active .ratio-horizontal {
-        transition-delay: .5s;
-        padding-bottom: 56.25%;
-    }
-    .swiper--rooms .swiper-slide-prev .ratio-horizontal{
-        padding-bottom: 56.25%;
     }
     .jumbotron--prev, .jumbotron--next, .slick-arrow {
         display: block !important;
