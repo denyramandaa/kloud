@@ -197,20 +197,6 @@ a:hover {
 .swiper-pagination-bullet-active {
     background: #928883;
 }
-.filter-box {
-    background-color: #928883;
-    border-radius: 8px 8px 0 0;
-}
-.filter-menu {
-    border-radius: 8px 8px 0 0;
-    color: #fff;
-}
-.filter-menu {
-    border-radius: 8px 8px 0 0;
-}
-.filter-menu .nonactive {
-    display: none;
-}
 .partnership--prev, .partnership--next, .rooms--prev, .rooms--next {
     position: relative;
     left: auto;
@@ -230,6 +216,21 @@ a:hover {
 .partnership--next, .rooms--next {
     background-image: url('../images/icons/arr-right-brown.png');
 }
+
+.swiper--filters select {
+    background-color: #fff;
+    font-size: 16px;
+    background-image: url('../images/icons/arr-bottom-grey.png');
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+    background-position: 95% center;
+    color: #999;
+    background-size: 12px;
+}
+.swiper--rooms .swiper-slide {
+    height: auto;
+}
+
 /* own style */
 .sidebar {
     width: 100%;
@@ -241,6 +242,21 @@ a:hover {
 }
 .sidebar.show {
     transform: translateX(0%);
+}
+
+.filter-box {
+    background-color: #928883;
+    border-radius: 8px 8px 0 0;
+}
+.filter-menu {
+    border-radius: 8px 8px 0 0;
+    color: #fff;
+}
+.filter-menu {
+    border-radius: 8px 8px 0 0;
+}
+.filter-menu .nonactive {
+    display: none;
 }
 .line-grey {
     width: 80px;
@@ -328,16 +344,6 @@ footer {
 .dropdown-menu {
     top: 20px !important;
 }
-.swiper--filters select {
-    background-color: #fff;
-    font-size: 16px;
-    background-image: url('../images/icons/arr-bottom-grey.png');
-    background-repeat: no-repeat;
-    -webkit-appearance: none;
-    background-position: 95% center;
-    color: #999;
-    background-size: 12px;
-}
 .floating-button {
     width: 50px;
     position: fixed;
@@ -345,12 +351,109 @@ footer {
     right: 0;
     z-index: 99;
 }
-.swiper--rooms .swiper-slide {
-    height: auto;
+.youtube-pop-up {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 80;
+    display: none;
+}
+.youtube-pop-up-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.youtube-pop-up-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(62,57,54,0.75);
+}
+.youtube-video-container {
+    position: absolute;
+    width: 90%;
+    max-width: 800px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.youtube-video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    border-radius: 8px;
+}
+.youtube-video iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.close-youtube {
+    cursor: pointer;
+    width: 20px;
+    position: absolute;
+    right: 20px;
+    top: -10px;
+    transform: translate(100%,-100%);
+}
+.location-map {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.dropdown-toggle::after {
+    border: none;
+    width: 8px;
+    height: 4px;
+    background-image: url('../images/icons/arr-bottom.png');
+    background-size: cover;
+}
+.jumbotron--slick .slick-slide{
+    width: 296px;
 }
 
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    background-size: cover;
+    cursor: pointer;
+    display: none !important;
+    width: 48px;
+    height: 48px;
+}
+.slick-prev {
+    background-image: url('../images/icons/arr-left.png');
+    transform: translate(-50%,-50%);
+    left: calc((100% - 1020px)/2);
+}
+.slick-next {
+    background-image: url('../images/icons/arr-right.png');
+    transform: translate(50%,-50%);
+    right: calc((100% - 1020px)/2);
+}
+.slick-prev:before, .slick-next:before {
+    content: '';
+}
+.slick-prev:hover, .slick-prev:focus {
+    background-image: url('../images/icons/arr-left.png');
+    background-size: cover;
+}
+.slick-next:hover, .slick-next:focus {
+    background-image: url('../images/icons/arr-right.png');
+    background-size: cover;
+}
 /* media query */
 @media (min-width: 769px) {
+    .jumbotron--slick .slick-slide{
+        width: 1020px;
+    }
     .custom-swiper-view {
         align-items: end;
     }
@@ -465,14 +568,14 @@ footer {
     .swiper--rooms .swiper-slide-prev .ratio-horizontal{
         padding-bottom: 56.25%;
     }
+    .jumbotron--prev, .jumbotron--next, .slick-arrow {
+        display: block !important;
+    }
 }
 
 @media (min-width: 992px) {
     .container {
         max-width: 1040px;
-    }
-    .jumbotron--prev, .jumbotron--next {
-        display: block;
     }
 }
 @media (min-width: 1200px) {

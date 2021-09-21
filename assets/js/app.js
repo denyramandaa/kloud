@@ -180,6 +180,28 @@ $(document).ready(function() {
             swiperRooms.slideTo(idx)
         })
     });
+    $('.youtube-click').each(function(idx) {
+        $(this).click(() => {
+            $('.youtube-pop-up').show()
+            $('.iframe-youtube').attr('src', $(this).find('.youtube-thumb').data('video'))
+        })
+    });
+    $('.close-youtube').click(() => {
+        $('.youtube-pop-up').hide()
+        $('.iframe-youtube').attr('src', '')
+    })
+    $('.youtube-pop-up-overlay').click(() => {
+        $('.youtube-pop-up').hide()
+        $('.iframe-youtube').attr('src', '')
+    })
+    $('.jumbotron--slick').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        centerMode: true,
+        variableWidth: true
+    });
     initSwiperRooms();
     initSwiperJumbotron();
     initSwiperFilters();

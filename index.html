@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+	<link rel="stylesheet" href="assets/css/slick.css">
+	<link rel="stylesheet" href="assets/css/slick-theme.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -166,7 +168,7 @@
 	<!-- jumbotron-slide -->
 	<section class="jumbotron w-full mt-5 mt-md-4 pb-0 mb-4 mb-md-0 px-0 bg-white">
 		<div class="container mt-2 position-relative">
-			<div class="swiper-container swiper--jumbotron w-full">
+			<!-- <div class="swiper-container swiper--jumbotron w-full">
 			  <div class="swiper-wrapper d-flex flex-nowrap">
 				<div class="swiper-slide px-2">
 					<div class="ratio-horizontal rounded-8" style="background-image: url('assets/images/cov1.jpg');"></div>
@@ -180,7 +182,18 @@
 			  </div>
 			</div>
 			<div class="jumbotron--nav jumbotron--prev"></div>
-			<div class="jumbotron--nav jumbotron--next"></div>
+			<div class="jumbotron--nav jumbotron--next"></div> -->
+			<div class="jumbotron--slick">
+				<div class="px-2">
+					<div class="ratio-horizontal rounded-8" style="background-image: url('assets/images/cov1.jpg');"></div>
+				</div>
+				<div class="px-2">
+					<div class="ratio-horizontal rounded-8" style="background-image: url('assets/images/cov2.jpg');"></div>
+				</div>
+				<div class="px-2">
+					<div class="ratio-horizontal rounded-8" style="background-image: url('assets/images/cov3.jpg');"></div>
+				</div>
+			</div>
 		</div>
 	</section>
 
@@ -515,12 +528,12 @@
 				</div>
 				<div class="swiper-slide card">
 					<div class="card-body">
-						<a href="#" class="d-flex justify-content-center align-items-center position-relative">
-							<div class="ratio-thumb-video w-full" style="background-image: url(assets/images/testimoni-2.jpg);"></div>
+						<div class="d-flex justify-content-center align-items-center position-relative cursor-pointer youtube-click">
+							<div class="ratio-thumb-video w-full youtube-thumb" style="background-image: url(assets/images/testimoni-2.jpg);" data-video="https://www.youtube.com/embed/fJ9rUzIMcZQ"></div>
 							<div class="youtube-icon">
 								<img src="assets/images/icons/youtube-icon.png" alt="icon youtube">
 							</div>
-						</a>
+						</div>
 						<div class="mt-4">
 							<h4 class="font-weight-bold text-lg">Laura Basuki</h4>
 							<p class="text-grey mb-0">Lorem ipsum dolor sit amet,</p>
@@ -545,12 +558,12 @@
 				</div>
 				<div class="swiper-slide card">
 					<div class="card-body">
-						<a href="#" class="d-flex justify-content-center align-items-center position-relative">
-							<div class="ratio-thumb-video w-full" style="background-image: url(assets/images/testimoni-2.jpg);"></div>
+						<div class="d-flex justify-content-center align-items-center position-relative cursor-pointer youtube-click">
+							<div class="ratio-thumb-video w-full youtube-thumb" style="background-image: url(assets/images/testimoni-2.jpg);" data-video="https://www.youtube.com/embed/tgbNymZ7vqY"></div>
 							<div class="youtube-icon">
 								<img src="assets/images/icons/youtube-icon.png" alt="icon youtube">
 							</div>
-						</a>
+						</div>
 						<div class="mt-4">
 							<h4 class="font-weight-bold text-lg">Laura Basuki</h4>
 							<p class="text-grey mb-0">Lorem ipsum dolor sit amet,</p>
@@ -561,6 +574,19 @@
 			<div class="testimonials--pagination mt-4 d-flex justify-content-center"></div>
 		</div>
 	</section>
+
+	<!-- youtube-pop-up -->
+	<div class="youtube-pop-up">
+		<div class="youtube-pop-up-inner">
+			<div class="youtube-pop-up-overlay"></div>
+			<div class="youtube-video-container">
+				<div class="youtube-video">
+					<iframe class="iframe-youtube" width="420" height="345" src=""></iframe>
+					<span class="close-youtube"><img src="assets/images/icons/close-icon-white.png"></span>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- partnership -->
 	<section class="partnership container custom-mt-section">
@@ -662,8 +688,10 @@
 				</div>
 			</div>
 			<div class="w-full col-md-8 overlay px-0">
-				<div class="ratio-thumb-video" style="background-image: url('assets/images/map.jpg')"></div>
-				<div class="location-box d-flex">
+				<div class="ratio-thumb-video">
+					<iframe class="location-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1145.6465881883507!2d106.82009545477077!3d-6.2113881997528795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f403cbfcefcd%3A0xb4e50142ed6b1a9f!2sInternational%20Financial%20Centre%20-%20Jakarta!5e0!3m2!1sen!2sid!4v1632195187807!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				</div>
+				<!-- <div class="location-box d-flex">
 					<div class="d-block col-9 pr-3 px-0">
 						<h3 class="text-xl font-weight-bold mb-2 mb-md-3">International Financial Centre - Jakarta</h3>
 						<a class="mt-4 text-grey-200" href="#">Lihat peta lebih besar</a>
@@ -671,7 +699,7 @@
 					<div class="d-flex col-3 justify-content-end px-0">
 						<img src="assets/images/icons/routes.png" alt="icon-route">
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</section>
@@ -779,6 +807,8 @@
 		<div class="text-center text-light text-sm">Copyright © 2021 KLOUD Space Solutions Pte Limited.</div>
 	</footer>
 
+
+	<!-- floating button -->
 	<section class="floating-button">
 		<a href="#">
 			<img src="assets/images/icons/wa-floating.png" alt="wa">
@@ -793,6 +823,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js?ver=4.5.0"></script>
     <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
 </html>
